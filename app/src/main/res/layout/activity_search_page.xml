@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BAD5E8"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:context=".SearchPage">
+
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:drawableEnd="@drawable/search_inactive"
+        android:ems="10"
+        android:hint="search here"
+        android:inputType="text"
+        android:textColorHint="#374C4C" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="610dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <ListView
+            android:id="@+id/search_list"
+            android:layout_width="match_parent"
+            android:layout_height="667dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/navigarion_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/homebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:src="@drawable/home_inactive" />
+
+        <ImageButton
+            android:id="@+id/searchbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="#565EE3E3"
+            android:src="@drawable/search_active" />
+
+        <ImageButton
+            android:id="@+id/addpostbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:src="@drawable/add_inactive" />
+
+        <ImageButton
+            android:id="@+id/btnprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="#03FFFFFF"
+            android:src="@drawable/profile_inactive" />
+    </LinearLayout>
+
+</LinearLayout>

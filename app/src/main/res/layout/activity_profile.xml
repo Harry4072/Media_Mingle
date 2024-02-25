@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Gender"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BAD5E8"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/logo_wbc"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/logo_no_background" />
+
+        <TextView
+            android:id="@+id/unm"
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center|start"
+            android:paddingLeft="10dp"
+            android:text="User name"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/logoutbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:src="@drawable/option"
+            app:srcCompat="@drawable/logout" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:paddingTop="2dp">
+
+        <ImageView
+            android:id="@+id/user_img"
+            android:layout_width="114dp"
+            android:layout_height="141dp"
+            android:layout_gravity="start"
+            android:layout_marginRight="10dp"
+            android:paddingTop="2dp"
+            app:srcCompat="@drawable/user_logo" />
+
+        <TextView
+            android:id="@+id/post"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center|start"
+            android:paddingTop="2dp"
+            android:text="post"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/follower"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center|start"
+            android:paddingTop="2dp"
+            android:text="follower"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/following"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center|start"
+            android:text="following"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="7dp"
+        android:text="Edit Profile"
+        android:textSize="30dp" />
+
+
+    <GridView
+        android:id="@+id/gridPost"
+        android:layout_width="match_parent"
+        android:layout_height="363dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:columnWidth="30dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="5dp" />
+
+    <LinearLayout
+        android:id="@+id/navigarion_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/homebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:src="@drawable/home_inactive" />
+
+        <ImageButton
+            android:id="@+id/searchbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:src="@drawable/search_inactive" />
+
+        <ImageButton
+            android:id="@+id/postbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            android:src="@drawable/add_inactive" />
+
+        <ImageButton
+            android:id="@+id/btnprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0.5dp"
+            android:layout_marginRight="0.5dp"
+            android:layout_weight="1"
+            android:background="#565EE3E3"
+            android:src="@drawable/profile_active" />
+    </LinearLayout>
+
+
+</LinearLayout>
