@@ -170,14 +170,13 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="10dp"
-            android:gravity="center"
+            android:gravity="left"
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/rdomale"
-                android:layout_width="125dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:checked="false"
@@ -186,8 +185,7 @@
                 android:textSize="20sp" />
 
             <RadioButton
-                android:id="@+id/rdofemale"
-                android:layout_width="125dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:checked="false"
@@ -196,8 +194,7 @@
                 android:textSize="20sp" />
 
             <RadioButton
-                android:id="@+id/rdoother"
-                android:layout_width="125dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:checked="false"
@@ -211,7 +208,7 @@
 
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_reg"
         android:layout_width="match_parent"
         android:layout_height="63dp"
         android:backgroundTint="#537875"
