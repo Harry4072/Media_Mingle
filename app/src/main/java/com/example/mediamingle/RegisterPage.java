@@ -23,8 +23,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.os.Bundle;
-import android.widget.Toast;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,9 +31,9 @@ public class RegisterPage extends AppCompatActivity {
     EditText name,usr_name,password,email,txt_Date;
     RadioGroup radioGroup;
 
-    String name_ans,usr_name_ans,password_ans,email_ans,txt_Date_ans,gender;
+    String name_ans,usr_name_ans,password_ans,email_ans,gender,txt_Date_ans;
 
-    Button btn_reg;
+    Button submit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +46,9 @@ public class RegisterPage extends AppCompatActivity {
         radioGroup = findViewById(R.id.radioGroup);
         email = findViewById(R.id.email);
         txt_Date = findViewById(R.id.txt_Date);
-        btn_reg = findViewById(R.id.btn_reg);
+        submit = findViewById(R.id.btn_reg);
 
-        btn_reg.setOnClickListener(new View.OnClickListener() {
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 name_ans = name.getText().toString();
@@ -63,9 +61,11 @@ public class RegisterPage extends AppCompatActivity {
                 RadioButton rb = findViewById(id);
                 gender = rb.getText().toString();
 
+//                Toast.makeText(getApplicationContext(),""+password_ans,Toast.LENGTH_LONG).show();
 
-                RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-                String url = "http://192.168.163.254/API/register.php";
+
+                RequestQueue requestQueue = Volley.newRequestQueue(RegisterPage.this);
+                String url = "http://192.168.163.254/MediaMingle/project_api/register.php";
                 StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
