@@ -63,6 +63,7 @@
         android:layout_marginRight="50dp"
         android:backgroundTint="#314543"
         android:text="Log-in"
+        android:enabled="false"
         android:textSize="22sp" />
 
     <TextView

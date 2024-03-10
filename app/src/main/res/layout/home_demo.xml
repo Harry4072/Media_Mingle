@@ -57,19 +57,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/heart" />
 
-                <ImageView
-                    android:id="@+id/ben_comment"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:src="@drawable/coment_second" />
 
-                <ImageView
-                    android:id="@+id/btn_share"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/share" />
 
             </LinearLayout>
         </LinearLayout>

@@ -2,6 +2,9 @@ package com.example.mediamingle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,6 +38,9 @@ public class RegisterPage extends AppCompatActivity {
 
     Button submit;
 
+    SharedPreferences sp;
+    SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +53,21 @@ public class RegisterPage extends AppCompatActivity {
         email = findViewById(R.id.email);
         txt_Date = findViewById(R.id.txt_Date);
         submit = findViewById(R.id.btn_reg);
+
+        name.addTextChangedListener(check);
+        usr_name.addTextChangedListener(check);
+        email.addTextChangedListener(check);
+        email.addTextChangedListener(check);
+        password.addTextChangedListener(check);
+
+        sp = getSharedPreferences("loginfile",MODE_PRIVATE);
+        editor = sp.edit();
+
+        if(sp.getString("isloggedin","").equals("true")){
+            Intent i = new Intent(RegisterPage.this, Home.class);
+            startActivity(i);
+            finishAffinity();
+        }
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +91,9 @@ public class RegisterPage extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         if (response.equals("success")) {
+                            editor.putString("isloggedin","true");
+                            editor.putString("unm",usr_name_ans);
+                            editor.commit();
                             Toast.makeText(RegisterPage.this, "Registration successfully", Toast.LENGTH_SHORT).show();
                             Intent i = new Intent(RegisterPage.this, Home.class);
                             startActivity(i);
@@ -102,4 +126,25 @@ public class RegisterPage extends AppCompatActivity {
             }
         });
     }
+    TextWatcher check = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            String nm = name.getText().toString().trim();
+            String unm = usr_name.getText().toString().trim();
+            String mail = email.getText().toString().trim();
+            String date = txt_Date.getText().toString().trim();
+            String pass = password.getText().toString();
+            submit.setEnabled(!unm.isEmpty() && !pass.isEmpty() && !nm.isEmpty() && !mail.isEmpty() && !date.isEmpty());
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
 }

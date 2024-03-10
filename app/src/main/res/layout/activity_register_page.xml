@@ -127,7 +127,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="date"
-            android:hint="DD/MM/YYYY"/>
+            android:hint="formate : YYYY/MM/DD"/>
     </LinearLayout>
 
     <LinearLayout
@@ -213,6 +213,7 @@
         android:layout_height="63dp"
         android:backgroundTint="#537875"
         android:text="Register"
+        android:enabled="false"
         android:textSize="25dp" />
 
 </LinearLayout>
