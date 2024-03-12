@@ -57,7 +57,7 @@ public class RegisterPage extends AppCompatActivity {
         name.addTextChangedListener(check);
         usr_name.addTextChangedListener(check);
         email.addTextChangedListener(check);
-        email.addTextChangedListener(check);
+        txt_Date.addTextChangedListener(check);
         password.addTextChangedListener(check);
 
         sp = getSharedPreferences("loginfile",MODE_PRIVATE);

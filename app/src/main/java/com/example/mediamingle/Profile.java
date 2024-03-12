@@ -19,7 +19,6 @@ public class Profile extends AppCompatActivity {
 
     private ImageButton postbtn,searchbtn,homebtn,logoutbtn ;
     private Button editprofile;
-    SharedPreferences sp;
     SharedPreferences.Editor editor;
 
     @Override
@@ -32,9 +31,6 @@ public class Profile extends AppCompatActivity {
         homebtn = (ImageButton) findViewById(R.id.homebtn);
         editprofile = (Button) findViewById(R.id.btn_edit_profile);
         logoutbtn = findViewById(R.id.logoutbtn);
-
-        sp = getSharedPreferences("loginfile",MODE_PRIVATE);
-        editor = sp.edit();
 
         logoutbtn.setOnClickListener(new View.OnClickListener() {
             @Override

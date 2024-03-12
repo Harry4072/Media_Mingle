@@ -28,10 +28,11 @@
 
     </LinearLayout>
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/post_list"
         android:layout_width="match_parent"
-        android:layout_height="625dp" />
+        android:layout_height="670dp"
+        tools:listitem="@layout/home_demo" />
 
     <LinearLayout
         android:id="@+id/navigarion_bar"
